@@ -48,6 +48,7 @@ setuptools.setup(
         # plugin deps
         'influxdb': ['influxdb'],
         'prometheus': ['prometheus_client'],
+        'postgresql': ['pygresql'],
         'dev': [
             'gunicorn',
             'Sphinx==1.5.6',

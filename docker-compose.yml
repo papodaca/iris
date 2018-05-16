@@ -1,0 +1,14 @@
+version: "3"
+services:
+  db:
+    image: postgres:9.6
+    environment:
+      POSTGRES_DB: iris
+      POSTGRES_USER: iris
+  app:
+    build: .
+    # read_only: true
+    environment:
+      DB_HOST: db
+    ports:
+      - "3000:3000"
